@@ -48,6 +48,21 @@
                 width: 100%;
             }
         }
+
+        @media (max-width: 600px) { /* Mobile view */
+            body {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .list-section {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .links a {
+                width: 100%;
+                padding: 15px;
+            }
+        }
        
         .right-list:hover + .left-list {
             opacity: 0;
