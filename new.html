@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody / TheAceTwo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            gap: 20px;
+        }
+        .container {
+            text-align: left;
+            background: hsl(0, 100%, 20%);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            margin: 0;
+            height: calc(100vh - 40px);
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .container:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+        .container:first-child {
+            text-align: right;
+        }
+        .container:last-child {
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                width: 90%;
+                height: auto;
+                margin-bottom: 20px;
+                text-align: center !important;
+            }
+        }
+        .links a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0073e6;
+            border-radius: 5px;
+            white-space: normal;
+        }
+        /* Add icon styling */
+        .links a i {
+            margin-right: 10px;
+            width: 20px;
+        }
+        /* Add these new styles */
+        .container.left-container .links {
+            text-align: right;
+        }
+        
+        .container.right-container .links {
+            text-align: left;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .container:hover::before {
+            opacity: 0.3;
+        }
+
+        .left-container::before {
+            background-image: url('path-to-your-first-image.jpg');
+        }
+
+        .right-container::before {
+            background-image: url('path-to-your-second-image.jpg');
+        }
+
+        /* Ensure text remains readable */
+        .container * {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <!-- Add Font Awesome CDN before closing head tag -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container left-container">
+        <p>in real life</p>
+        <h1>Cody Pearl</h1>
+        <p>I'm TheAceTwo everywhere except youtube because they wanted to change their usernames a few years back and took it from me</p>
+        <div class="links">
+            <a href="https://lightroom.adobe.com/u/theacetwo" target="_blank"><i class="fas fa-camera"></i> Lightroom - theacetwo</a>
+            <a href="https://www.instagram.com/theacetwo" target="_blank"><i class="fab fa-instagram"></i> Instagram - theacetwo</a>
+            <a href="https://www.facebook.com/TheAceTwo" target="_blank"><i class="fab fa-facebook"></i> Facebook - TheAceTwo</a>
+            <a href="https://www.tiktok.com/@theacetwo" target="_blank"><i class="fab fa-tiktok"></i> TikTok - TheAceTwo</a>
+        </div>
+    </div>
+
+    <div class="container right-container">
+        <p>on the internet</p>
+        <h1>TheAceTwo</h1>
+        <div class="links">
+            <a href="https://www.youtube.com/@theacetw/" target="_blank"><i class="fab fa-youtube"></i> YouTube - TheAceTwo</a>
+            <a href="https://twitter.com/TheAceTwo" target="_blank"><i class="fab fa-twitter"></i> Twitter - TheAceTwo</a>
+            <a href="https://www.twitch.tv/theacetwo" target="_blank"><i class="fab fa-twitch"></i> Twitch - theacetwo</a>
+            <a href="https://www.reddit.com/user/TheAceTwo/" target="_blank"><i class="fab fa-reddit"></i> Reddit - TheAceTwo</a>
+            <a href="https://steamcommunity.com/id/theacetwo/" target="_blank"><i class="fab fa-steam"></i> Steam - TheAceTwo</a>
+            <a href="http://live.xbox.com/Profile?Gamertag=TheAceTwo" target="_blank"><i class="fab fa-xbox"></i> Xbox - TheAceTwo</a>
+        </div>
+    </div>
+</body>
+</html>
