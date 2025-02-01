@@ -10,7 +10,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap; /* Add this line */
             min-height: 100vh;
             margin: 1;
             padding: 40px;
@@ -52,6 +51,7 @@
         @media (max-width: 600px) { /* Mobile view */
             body {
                 flex-direction: column;
+                align-items: center; /* Center align the lists horizontally */
                 padding: 20px;
             }
             .list-section {
