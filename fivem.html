@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM - thelazysquad.xyz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .button-grid { /* grid configuration */
+            display: grid;
+            grid-template-columns: 550px 500px 200px; /* Three columns */
+            grid-auto-flow: dense; /* Ensures proper stacking */
+            column-gap: 20px;
+            row-gap: 15px;
+            justify-content: center;
+            margin-top: 50px;
+            margin-right: 175px;
+        }
+
+        /* First column buttons - 2 stacked */
+        .button-1 { 
+            grid-row: 1;
+            width: 550px;
+            height: 185px;
+            border-radius: 15px;
+            grid-column: 1;
+        }
+        .button-2 { 
+            grid-row: 2;
+            width: 550px;
+            height: 100px; 
+            border-radius: 15px;
+            grid-column: 1;
+        }
+
+        /* Second column - 1 tall */
+        .button-3 { 
+            width: 500px;
+            height: 300px;
+            border-radius: 15px;
+            grid-column: 2;
+            grid-row: 1 / span 2;
+        }
+
+        /* Third column - 3 stacked */
+        .button-4 { 
+            grid-row: 1;
+            width: 300px;
+            height: 90px;
+            border-radius: 15px;
+            grid-column: 3;
+        }
+        .button-5 { 
+            grid-row: 2;
+            width: 300px;
+            height: 90px;
+            border-radius: 15px;
+            grid-column: 3;
+            margin-top: -100px;
+        }
+        .button-6 { 
+            grid-row: 3;
+            width: 300px;
+            height: 100px;
+            border-radius: 15px;
+            grid-column: 3;
+            margin-top: -115px;
+        }
+        /* button stuff for all of them */
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+            background: #1a1a1a;
+        }
+        .button:hover {
+            transform: scale(0.98);
+            border-color: #683548;
+        }
+        
+        .button-text {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .button-subtext {
+            font-size: 18px;
+            color: #808080;
+        }
+
+        .pink-text {
+            color: #ff69b4;
+        }
+
+        .gray-text {
+            color: #808080;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="navbar.html" width="100%" height="50" style="border:none;"></iframe>
+    <main>
+        <div class="button-grid">
+            <a href="https://cfx.re/join/dz9dby" class="button button-1">
+                <span class="button-text pink-text">Play</span>
+                <span class="button-subtext">connect to the server</span>
+            </a>
+            <a href="https://servers.fivem.net/servers/detail/dz9dby" class="button button-2">
+                <span class="button-text gray-text">play.thelazysquad.xyz</span>
+                <span class="button-subtext">view server status</span>
+            </a>
+            <a href="404.html" class="button button-3">
+                <span class="button-text">Events/Info</span>
+            </a>
+            <a href="404.html" class="button button-4">
+                <span class="button-text">Support Us</span>
+            </a>
+            <a href="404.html" class="button button-5">
+                <span class="button-text">About</span>
+            </a>
+            <a href="404.html" class="button button-6">
+                <span class="button-text">Coming Soon</span>
+            </a>
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
